@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1920px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    background: #FF9900;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23.4581px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    color: #333333;
+}
+
+/* HEADER */
+
+.header {
+    position: relative;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header__container {
+    padding-right: 69px;
+    display: flex;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.logo {
+    max-height: 72px;
+}
+
+.header__logo {
+    transform: translateX(-1px);
+}
+
+.header__nav {
+    margin-right: 81px;
+    margin-left: auto;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 85px;
+}
+
+.search {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.header__search {
+    transform: translateY(1px);
+}
+
+/* HERO */
+
+.section-hero__container {
+    margin-bottom: 100px;
+}
+
+.section-hero__content {
+    padding-top: 101px;
+    padding-bottom: 100px;
+    padding-left: 80px;
+    background: url(../img/hero-bg.jpg) no-repeat;
+}
+
+.section-hero__title {
+    max-width: 837px;
+    margin-bottom: 23px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 70px;
+    line-height: 85px;
+    color: #FFFFFF;
+}
+
+.section-hero__text {
+    max-width: 790px;
+    margin-bottom: 90px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.section-hero__btn {
+    padding: 24.5px 37.5px;
+}
+
+/* ABOUT US */
+
+.section-about-us {
+    margin-bottom: 100px;
+}
+
+.section-about-us__subtitle {
+    margin-bottom: 20px;
+}
+
+.section-about-us__text {
+    max-width: 1235px;
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+}
+
+.section-about-us__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 32px;
+}
+
+.section-about-us__details {
+    grid-row: 1/3;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 868px;
+    height: 622px;
+    background-image: url(../img/section-about-us-details-bg.jpg);
+}
+
+.section-about-us__details::after {
+    content: '';
+    top: 426px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.section-about-us__details-text {
+    max-width: 454px;
+    margin-right: 139px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    color: #FFFFFF;
+    z-index: 2;
+}
+
+.section-about-us__details-btn {
+    margin-bottom: 68px;
+    padding: 17px 35px;
+    font-size: 16px;
+    line-height: 20px;
+    background: none;
+    border: 3px solid #FF9900;
+    z-index: 2;
+}
+
+.benefit-card {
+    display: flex;
+    padding: 64px 117px 64px 59px;
+    border: 1px solid #CACACA;
+}
+
+.benefit-card__img {
+    margin-right: 50px;
+}
+
+.benefit-card__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.benefit-card__title {
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333333;
+}
+
+.benefit-card__text {
+    max-width: 450px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #333333;
+}
