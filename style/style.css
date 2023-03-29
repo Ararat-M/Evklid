@@ -2,11 +2,11 @@
     box-sizing: border-box;
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
+    font-style: normal;
 }
 
 a {
     text-decoration: none;
-    font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 22px;
@@ -16,6 +16,12 @@ a {
 ul {
     padding: 0;
     list-style: none;
+}
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
 }
 
 .container {
@@ -30,16 +36,14 @@ ul {
     border: none;
     cursor: pointer;
     text-align: center;
-    background: #FF9900;
-    font-style: normal;
     font-weight: 700;
-    font-size: 23.4581px;
-    line-height: 29px;
+    font-size: 16px;
+    line-height: 20px;
+    background: #FF9900;
     color: #FFFFFF;
 }
 
 .subtitle {
-    font-style: normal;
     font-weight: 400;
     font-size: 48px;
     line-height: 59px;
@@ -108,7 +112,6 @@ ul {
 .section-hero__title {
     max-width: 837px;
     margin-bottom: 23px;
-    font-style: normal;
     font-weight: 800;
     font-size: 70px;
     line-height: 85px;
@@ -118,7 +121,6 @@ ul {
 .section-hero__text {
     max-width: 790px;
     margin-bottom: 90px;
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -127,6 +129,8 @@ ul {
 
 .section-hero__btn {
     padding: 24.5px 37.5px;
+    font-size: 23.4px;
+    line-height: 29px
 }
 
 /* ABOUT US */
@@ -142,10 +146,6 @@ ul {
 .section-about-us__text {
     max-width: 1235px;
     margin-bottom: 50px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 32px;
     color: #333333;
 }
 
@@ -182,7 +182,6 @@ ul {
     margin-right: 139px;
     margin-bottom: 50px;
     margin-left: 50px;
-    font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 32px;
@@ -193,8 +192,6 @@ ul {
 .section-about-us__details-btn {
     margin-bottom: 68px;
     padding: 17px 35px;
-    font-size: 16px;
-    line-height: 20px;
     background: none;
     border: 3px solid #FF9900;
     z-index: 2;
@@ -218,7 +215,6 @@ ul {
 
 .benefit-card__title {
     margin-bottom: 8px;
-    font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -227,9 +223,225 @@ ul {
 
 .benefit-card__text {
     max-width: 450px;
-    font-style: normal;
+    color: #333333;
+}
+
+/* WORK */
+
+.section-work {
+    margin-bottom: 100px;
+}
+
+.section-work__subtitle {
+    margin-bottom: 50px;
+}
+
+.section-work__description {
+    font-size: 0px;
+    background: url(../img/work-description-bg-1.jpg) no-repeat;
+    background-position: 100% 100%;
+}
+
+.section-work__list {
+    display: flex;
+    margin-bottom: 45px;
+}
+
+.section-work__link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
+}
+
+.section-work__link_active {
+    color: #E1670E;
+}
+
+.section-work__item:not(:last-child) {
+    margin-right: 85px;
+}
+
+.section-work__description-title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+}
+
+.section-work__description-text {
+    max-width: 758px;
+    margin-bottom: 50px;
+    color: #333333;
+}
+
+.section-work__btn {
+    padding: 20px 38px;
+}
+
+.section-work__btn:not(:last-child) {
+    margin-right: 32px;
+}
+
+.section-work__btn-contract {
+    padding: 19px 37px;
+    border: 1px solid #333333;
+    font-weight: 400;
+    background: none;
+    color: #333333;
+}
+
+/* FAQ */
+
+.section-faq {
+    margin-bottom: 100px;
+}
+
+.section-faq__subtitle {
+    margin-bottom: 43px;
+}
+
+.question-list__line {
+    border: none;
+    height: 1px;
+    background: #CACACA;
+}
+
+.question-list__question {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.question__text {
+    align-self: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+}
+
+.question__btn {
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #ECECEC;
+}
+
+.question__btn::before {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 9px;
+    left: 10px;
+    right: 0px;
+    bottom: 0px;
+    background-image: url(../img/question-btn-rectangle.svg);
+}
+
+/* FOOTER */
+
+.footer {
+    font-size: 0;
+    background: #222222;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer__container {
+    display: flex;
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+}
+
+.footer__list {
+    margin-bottom: 90px;
+}
+
+.footer__link {
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 36px;
+    color: #CACACA;
+}
+
+.footer__social-icon:not(:last-child) {
+    margin-right: 25px;
+}
+
+.footer__form {
+    max-width: 570px;
+    margin-right: 236px;
+    margin-left: 351px;
+}
+
+.form__title {
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 59px;
+    color: #CACACA;
+}
+
+.form__input {
+    width: 570px;
+    height: 60px;
+    margin-bottom: 25px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 24px;
+    border: none;
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
-    color: #333333;
+    background: #414141;
+    color: #FFFFFF;
+}
+
+.form__input::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #CACACA;
+}
+
+.form__input-message {
+    resize: none;
+    height: 150px;
+    margin-bottom: 32px;
+}
+
+.form__btn-submit {
+    padding: 19px 52px;
+    margin-right: 22px;
+}
+
+.form__checkbox {
+    margin-right: 4px;
+}
+
+.form__checkbox-label {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #CACACA;
+}
+
+.footer__block-text {
+    padding-top: calc(137px - 50px);
+    max-width: 363px;
+    color: #CACACA;
 }
