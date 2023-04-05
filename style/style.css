@@ -139,7 +139,7 @@ p {
     background: url(../img/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
 }
 
 .section-hero__title {
@@ -195,7 +195,7 @@ p {
     background-image: url(../img/section-about-us-details-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
 }
 
 .section-about-us__details::after {
@@ -242,6 +242,7 @@ p {
 
 .benefit-card {
     display: flex;
+    max-width: 1235px;
     padding: 64px 117px 64px 59px;
     border: 1px solid #CACACA;
 }
@@ -274,42 +275,51 @@ p {
     margin-bottom: 50px;
 }
 
-.section-work__description {
-    font-size: 0px;
-    background-image: url(../img/work-description-bg-1.jpg);
-    background-repeat: no-repeat;
-    background-position: 100% 100%;
-}
-
-.section-work__list {
+.tab__list {
     display: flex;
     margin-bottom: 45px;
 }
 
-.section-work__link {
+
+.tab__item:not(:last-child) {
+    margin-right: 85px;
+}
+
+.tab__item-btn {
+    border: none;
+    background: none;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
     color: #333333;
 }
 
-.section-work__link_active {
+.tab__item-btn_active {
     color: #E1670E;
 }
 
-.section-work__link:hover {
+.tab__item-btn:hover {
     color: #FF9900;
 }
 
-.section-work__link:active {
-    color: #E1670E;
+.tab__content {
+    display: none;
 }
 
-.section-work__item:not(:last-child) {
-    margin-right: 85px;
+.tab__content_active {
+    font-size: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+            'titel img'
+            'content img'
+            'btns img';
+    column-gap: 142px;
 }
 
-.section-work__description-title {
+.tab__title {
+    grid-area: titel;
     margin-bottom: 8px;
     font-weight: 700;
     font-size: 24px;
@@ -317,21 +327,26 @@ p {
     color: #333333;
 }
 
-.section-work__description-text {
+.tab__text {
+    grid-area: content;
     max-width: 758px;
     margin-bottom: 50px;
     color: #333333;
 }
 
-.section-work__btn {
+.tab__block-btns {
+    grid-area: btns;
+}
+
+.tab__btn {
     padding: 20px 38px;
 }
 
-.section-work__btn:not(:last-child) {
+.tab__btn:not(:last-child) {
     margin-right: 32px;
 }
 
-.section-work__btn-contract {
+.tab__btn-contract {
     padding: 19px 37px;
     border: 1px solid #333333;
     font-weight: 400;
@@ -339,17 +354,25 @@ p {
     color: #333333;
 }
 
-.section-work__btn-contract:hover,
-.section-work__btn-contract:focus-visible {
+.tab__btn-contract:hover,
+.tab__btn-contract:focus-visible {
     background: #666666;
     border: #666666;
     color: #fff;
 }
 
-.section-work__btn-contract:active {
+.tab__btn-contract:active {
     background: #000;
     border: #000;
     color: #fff;
+}
+
+.tab__img {
+    grid-area: img;
+    width: 100%;
+    height: 460px;
+    align-self: end;
+    justify-self: end;
 }
 
 /* FAQ */
@@ -634,7 +657,6 @@ p {
     /* HERO */
     .section-hero__content {
         padding: 160px 77px;
-        background-image: url(../img/hero-bg-1024.jpg);
     }
 
     .section-hero__title {
@@ -689,7 +711,6 @@ p {
     /* HERO */
     .section-hero__content {
         padding: 160px 40px;
-        background-image: url(../img/hero-bg-768.jpg);
     }
 
     .section-hero__title {
