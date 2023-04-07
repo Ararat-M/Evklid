@@ -663,7 +663,6 @@ p {
     }
 
     .tab__text {
-        min-width: 437px;
         margin-bottom: 25px;
         margin-right: 50px;
     }
@@ -861,6 +860,10 @@ p {
         justify-content: space-between;
     }
 
+    .tab__item:not(:last-child) {
+        margin-right: 0px;
+    }
+
     .tab__content {
         flex-direction: column;
     }
@@ -888,10 +891,10 @@ p {
         max-width: 570px;
     }
 
-    /* .question-list__question:nth-of-type(3)>.question__title>.question__title-btn,
-    .question-list__question:nth-of-type(5)>.question__title>.question__title-btn {
-        align-self: flex-start;
-    } */
+    .question__title-btn>svg {
+        width: 18px;
+        height: 18px;
+    }
 
     /* FOOTER */
     .footer__container {
@@ -950,12 +953,14 @@ p {
     }
 
     .section-hero__title {
+        max-width: 100%;
         margin-bottom: 6px;
         font-size: 20px;
         line-height: 24px;
     }
 
     .section-hero__text {
+        max-width: 100%;
         margin-bottom: 30px;
         font-size: 12px;
         line-height: 15px;
@@ -1011,6 +1016,7 @@ p {
     }
 
     .benefit-card__title {
+        white-space: normal;
         margin-bottom: 4px;
         font-weight: 500;
         font-size: 18px;
@@ -1027,43 +1033,33 @@ p {
         margin-bottom: 16px;
     }
 
-    .section-work__list {
-        justify-content: space-between;
+    .tab__list {
         margin-bottom: 16px;
     }
-
-    .section-work__item:not(:last-child) {
-        margin-right: 0px;
-    }
-
-    .section-work__description {
-        padding-top: 176px;
-        background-size: 290px 160px;
-    }
     
-    .section-work__description-title {
+    .tab__title {
         font-weight: 500;
         font-size: 18px;
         line-height: 32px;
     }
 
-    .section-work__description-text {
+    .tab__text {
         margin-bottom: 16px;
         font-size: 14px;
         line-height: 28px;
     }
 
-    .section-work__btn {
+    .tab__btn {
         padding: 12px 38px;
         font-size: 12px;
         line-height: 15px;
     }
 
-    .section-work__btn:not(:last-child) {
+    .tab__btn:not(:last-child) {
         margin-right: 10px;
     }
 
-    .section-work__btn-contract {
+    .tab__btn-contract {
         padding: 11px 30px;
     }
 
@@ -1078,21 +1074,6 @@ p {
     .question__title-btn {
         width: 30px;
         height: 30px;
-    }
-
-    /* .question-list__question:nth-of-type(2)>.question__title-btn,
-    .question-list__question:nth-of-type(3)>.question__title-btn,
-    .question-list__question:nth-of-type(4)>.question__title-btn,
-    .question-list__question:nth-of-type(5)>.question__title-btn {
-        align-self: flex-start;
-    } */
-
-    .question__title-btn::before {
-        width: 18px;
-        height: 18px;
-        top: 5px;
-        left: 6px;
-        background-image: url(../img/question-btn-rectangle-18.svg);
     }
 
     /* FOOTER */
